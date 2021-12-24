@@ -1,0 +1,21 @@
+<section class="flex justify-center form-container">
+  <form class="form-control" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <!-- Email -->
+    <label class="label">
+      <span class="label-text">Email</span>
+    </label>
+    <input
+      type="email"
+      placeholder="email"
+      class="input input-bordered"
+      ngModel
+      name="email"
+      email
+      required
+      #email="ngModel"
+    />
+
+    <!-- Submit -->
+    <button class="btn btn-primary">Submit!</button>
+  </form>
+</section>

@@ -1,0 +1,22 @@
+<div class="card card-bordered h-full">
+  <figure>
+    <img
+      src="https://source.unsplash.com/random/700x700/?technology"
+      class="w-full"
+    />
+  </figure>
+  <div class="card-body">
+    <!-- Title -->
+    <h2 class="card-title">{{ project?.title }}</h2>
+    <!-- Description -->
+    <p>
+      {{ project?.description }}
+    </p>
+    <div class="card-actions">
+      <!-- Tags -->
+      <div *ngFor="let tag of project?.tags" class="badge badge-ghost">
+        {{ tag }}
+      </div>
+    </div>
+  </div>
+</div>

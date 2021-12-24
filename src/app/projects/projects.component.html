@@ -1,0 +1,20 @@
+<div class="p-20">
+  <h1 class="text-xl text-center mb-5">Projects</h1>
+
+  <!-- Row 1 -->
+  <div
+    class="
+      grid
+      lg:grid-cols-3
+      md:grid-cols-2
+      sm:grid-cols-1
+      gap-4
+      justify-items-center
+    "
+  >
+    <app-project-card
+      *ngFor="let project of projects"
+      [project]="project"
+    ></app-project-card>
+  </div>
+</div>
