@@ -1,5 +1,18 @@
-<section class="flex justify-center form-container">
-  <form class="form-control" (ngSubmit)="onSubmit(f)" #f="ngForm">
+<div class="md:p-20 p-0">
+  <!-- Title - contact me  -->
+  <h1>Contact me</h1>
+
+  <div *ngIf="messageSuccess" className="flex items-start mb-4 space-x-2">
+    <strong class="text-success">Message Sent </strong>
+    <i class="far fa-check-circle text-success"></i>
+  </div>
+
+  <!-- Form input section -->
+  <form
+    class="form-control flex justify-center"
+    (ngSubmit)="onSubmit(f)"
+    #f="ngForm"
+  >
     <!-- Email -->
     <label class="label">
       <span class="label-text">Email</span>
@@ -10,12 +23,42 @@
       class="input input-bordered"
       ngModel
       name="email"
+      [(ngModel)]="emailText"
       email
       required
       #email="ngModel"
     />
 
+    <!-- Subject of message -->
+    <label class="label">
+      <span class="label-text">Subject</span>
+    </label>
+    <input
+      type="text"
+      placeholder="subject"
+      class="input input-bordered"
+      ngModel
+      name="subject"
+      [(ngModel)]="subjectText"
+      required
+      #subject="ngModel"
+    />
+
+    <!-- Email -->
+    <label class="label">
+      <span class="label-text">Your Message</span>
+    </label>
+    <textarea
+      class="textarea h-24 textarea-bordered"
+      placeholder="Bio"
+      ngModel
+      name="message"
+      [(ngModel)]="textAreaText"
+      #message="ngModel"
+      required
+    ></textarea>
+
     <!-- Submit -->
-    <button class="btn btn-primary">Submit!</button>
+    <button class="btn btn-primary mt-3" [disabled]="!f.valid">Submit!</button>
   </form>
-</section>
+</div>
