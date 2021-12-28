@@ -9,10 +9,12 @@ import { ContactFormService } from '../services/contact-form.service';
 })
 export class ContactFormComponent implements OnInit {
   messageSuccess: boolean = false;
+  messageFailure: boolean = false;
   emailText: string = '';
   subjectText: string = '';
   textAreaText: string = '';
-  successInterval: any;
+  errorMessage: string = '';
+  formRequestInterval: any;
 
   constructor(private contactFormService: ContactFormService) {}
 
@@ -21,17 +23,30 @@ export class ContactFormComponent implements OnInit {
   async onSubmit(form: NgForm) {
     const res = await this.contactFormService.postMessage(form.value);
 
-    res.subscribe((message) => {
-      this.successInterval = setInterval(() => {
-        this.messageSuccess = false;
-        clearInterval(this.successInterval);
-      }, 3000);
+    res.subscribe(
+      (message) => {
+        this.formRequestInterval = setInterval(() => {
+          this.messageSuccess = false;
+          clearInterval(this.formRequestInterval);
+        }, 3000);
 
-      // Show text alert informing message was corrently send
-      this.messageSuccess = true;
-    });
+        // Show text alert informing message was corrently send
+        this.messageSuccess = true;
 
-    this.clearInputFields();
+        this.clearInputFields();
+      },
+      (err) => {
+        this.formRequestInterval = setInterval(() => {
+          this.messageFailure = false;
+          clearInterval(this.formRequestInterval);
+          console.log('Error Message: ', err);
+        }, 3000);
+
+        // Show text alert informing message was corrently send
+        this.errorMessage = err.message;
+        this.messageFailure = true;
+      }
+    );
   }
 
   clearInputFields() {

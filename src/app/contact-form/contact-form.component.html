@@ -7,6 +7,14 @@
     <i class="far fa-check-circle text-success"></i>
   </div>
 
+  <div *ngIf="messageFailure">
+    <div class="flex items-start space-x-2">
+      <strong class="text-error">Error occured, message not sent </strong>
+      <i class="far fa-times-circle text-error error-icon"></i>
+    </div>
+    <strong class="text-error">Reason: {{ errorMessage }} </strong>
+  </div>
+
   <!-- Form input section -->
   <form
     class="form-control flex justify-center"
@@ -50,7 +58,7 @@
     </label>
     <textarea
       class="textarea h-24 textarea-bordered"
-      placeholder="Bio"
+      placeholder="message"
       ngModel
       name="message"
       [(ngModel)]="textAreaText"
