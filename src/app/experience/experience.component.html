@@ -1,0 +1,24 @@
+<div class="md:p-20 p-0">
+  <h1 class="text-xl text-center">Experience</h1>
+  <p class="text-center mb-5">
+    Here is some of my professional and educational experience.
+    <a href="#" class="text-primary">CV Link.</a>
+  </p>
+
+  <!-- Row 1 -->
+  <div
+    class="
+      grid
+      lg:grid-cols-3
+      md:grid-cols-2
+      sm:grid-cols-1
+      gap-4
+      justify-items-center
+    "
+  >
+    <app-experience-card
+      *ngFor="let exp of experience"
+      [experience]="exp"
+    ></app-experience-card>
+  </div>
+</div>
