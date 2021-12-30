@@ -12,6 +12,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { SubscribeWidgetComponent } from './subscribe-widget/subscribe-widget.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SubscribeWidgetComponent } from './subscribe-widget/subscribe-widget.co
     WelcomeComponent,
     FooterComponent,
     SubscribeWidgetComponent,
+    AlertComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
