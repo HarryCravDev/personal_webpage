@@ -9,6 +9,9 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { FooterComponent } from './footer/footer.component';
+import { SubscribeWidgetComponent } from './subscribe-widget/subscribe-widget.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     ProjectsComponent,
     ProjectCardComponent,
     ContactFormComponent,
+    WelcomeComponent,
+    FooterComponent,
+    SubscribeWidgetComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
