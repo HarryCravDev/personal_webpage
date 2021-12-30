@@ -2,29 +2,40 @@
   <div class="card glass lg:card-side text-neutral-content flex items-center">
     <figure class="p-6 self-center">
       <img
-        src="https://picsum.photos/id/1005/300/200"
-        class="rounded-lg shadow-lg"
+        src="../../assets/IMG_2484.jpeg"
+        class="rounded-lg shadow-lg profile-image"
       />
     </figure>
+    <!-- src="https://picsum.photos/id/1005/300/200" -->
     <div class="max-w-md card-body">
       <h2 class="card-title">Subscribe</h2>
       <p>
         Subscribe to my email list and receive updates about the latest Software
         Engineering news and trends.
       </p>
-      <div class="form-control">
+      <!-- <div class="form-control"> -->
+      <form class="form-control" #f="ngForm" (ngSubmit)="onSubmit(f)">
         <label class="label">
-          <!-- <span class="label-text">Email</span> -->
+          <span *ngIf="inputLabel" class="label-text">Email</span>
         </label>
         <input
           type="text"
           placeholder="Enter your email here"
           class="input input-accent input-bordered"
+          ngModel
+          name="email"
+          [(ngModel)]="emailText"
+          email
+          required
+          #emailInputSubscribe="ngModel"
         />
-      </div>
-      <div class="card-actions">
-        <button class="btn glass rounded-full">Subscribe</button>
-      </div>
+        <div class="card-actions">
+          <button class="btn glass rounded-full" [disabled]="!f.valid">
+            Subscribe
+          </button>
+        </div>
+      </form>
+      <!-- </div> -->
     </div>
   </div>
 </div>
