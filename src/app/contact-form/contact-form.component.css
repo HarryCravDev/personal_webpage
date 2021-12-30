@@ -6,3 +6,13 @@
 .error-icon {
   line-height: 25px;
 }
+
+/* .card-actions:last-child {
+  margin: 0;
+} */
+
+.contact-form-button {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
