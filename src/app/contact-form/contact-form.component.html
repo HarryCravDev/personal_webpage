@@ -1,5 +1,82 @@
 <div class="md:p-20 p-0">
-  <!-- Title - contact me  -->
+  <app-alert *ngIf="messageSuccess" type="success"></app-alert>
+  <app-alert *ngIf="messageFailure" type="error"></app-alert>
+  <div class="card glass lg:card-side text-neutral-content flex items-center">
+    <div class="max-w-md card-body">
+      <!-- <h1>Contact me</h1> -->
+      <h2 class="card-title">Contact me</h2>
+
+      <!-- Form -->
+      <form
+        class="form-control flex justify-center"
+        (ngSubmit)="onSubmit(f)"
+        #f="ngForm"
+      >
+        <!-- Email -->
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <input
+          type="email"
+          placeholder="email"
+          class="input input-bordered input-accent"
+          ngModel
+          name="email"
+          [(ngModel)]="emailText"
+          email
+          required
+          #email="ngModel"
+        />
+
+        <!-- Subject of message -->
+        <label class="label">
+          <span class="label-text">Subject</span>
+        </label>
+        <input
+          type="text"
+          placeholder="subject"
+          class="input input-bordered input-accent"
+          ngModel
+          name="subject"
+          [(ngModel)]="subjectText"
+          required
+          #subject="ngModel"
+        />
+
+        <!-- Email -->
+        <label class="label">
+          <span class="label-text">Your Message</span>
+        </label>
+        <textarea
+          class="textarea h-24 textarea-bordered textarea-accent"
+          placeholder="message"
+          ngModel
+          name="message"
+          [(ngModel)]="textAreaText"
+          #message="ngModel"
+          required
+        ></textarea>
+
+        <!-- Submit -->
+        <div class="card-actions text-center">
+          <!-- <button class="btn glass rounded-full mt-3" [disabled]="!f.valid">
+            Submit!
+          </button> -->
+
+          <button
+            class="btn btn-primary mt-0 contact-form-button"
+            [disabled]="!f.valid"
+          >
+            Submit!
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 
+<div class="md:p-20 p-0">
+
   <h1>Contact me</h1>
 
   <div *ngIf="messageSuccess" className="flex items-start mb-4 space-x-2">
@@ -15,13 +92,13 @@
     <strong class="text-error">Reason: {{ errorMessage }} </strong>
   </div>
 
-  <!-- Form input section -->
+
   <form
     class="form-control flex justify-center"
     (ngSubmit)="onSubmit(f)"
     #f="ngForm"
   >
-    <!-- Email -->
+
     <label class="label">
       <span class="label-text">Email</span>
     </label>
@@ -37,7 +114,7 @@
       #email="ngModel"
     />
 
-    <!-- Subject of message -->
+
     <label class="label">
       <span class="label-text">Subject</span>
     </label>
@@ -52,7 +129,7 @@
       #subject="ngModel"
     />
 
-    <!-- Email -->
+
     <label class="label">
       <span class="label-text">Your Message</span>
     </label>
@@ -66,7 +143,7 @@
       required
     ></textarea>
 
-    <!-- Submit -->
+
     <button class="btn btn-primary mt-3" [disabled]="!f.valid">Submit!</button>
   </form>
-</div>
+</div> -->
