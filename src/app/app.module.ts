@@ -13,6 +13,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { SubscribeWidgetComponent } from './subscribe-widget/subscribe-widget.component';
 import { AlertComponent } from './alert/alert.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ExperienceCardComponent } from './experience/experience-card/experience-card.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { AlertComponent } from './alert/alert.component';
     FooterComponent,
     SubscribeWidgetComponent,
     AlertComponent,
+    ExperienceComponent,
+    ExperienceCardComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
