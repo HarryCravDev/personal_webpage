@@ -1,22 +1,33 @@
 <div class="card card-bordered h-full">
-  <figure>
+  <figure class="project-container">
     <img
-      src="https://source.unsplash.com/random/700x700/?technology"
+      src="https://source.unsplash.com/random/700x500/?technology"
       class="w-full"
     />
+    <div class="overlay glass">
+      <div class="card-body p-2 text w-full">
+        <h2 class="card-title text-center">{{ project?.title }}</h2>
+        <p class="">{{ project?.description }}</p>
+
+        <div class="card-actions self-center project-technologies-container">
+          <div *ngFor="let tag of project?.tags" class="badge badge-ghost">
+            {{ tag }}
+          </div>
+        </div>
+      </div>
+      <!-- <p class="text">{{ project?.description }}</p> -->
+    </div>
   </figure>
-  <div class="card-body">
-    <!-- Title -->
-    <h2 class="card-title">{{ project?.title }}</h2>
-    <!-- Description -->
-    <p>
-      {{ project?.description }}
-    </p>
+
+  <!-- <div class="card-body p-5">
+
+    <h2 class="card-title text-center">{{ project?.title }}</h2>
+
     <div class="card-actions">
-      <!-- Tags -->
+
       <div *ngFor="let tag of project?.tags" class="badge badge-ghost">
         {{ tag }}
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
