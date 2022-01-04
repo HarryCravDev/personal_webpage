@@ -40,7 +40,6 @@ export class WelcomeComponent implements OnInit {
   typeWriter(type: string) {
     if (type === 'title') {
       if (this.indexTitle < this.titleTemplate.length) {
-        console.log('Type Title...');
         this.title += this.titleTemplate.charAt(this.indexTitle);
         this.indexTitle++;
       }
@@ -48,7 +47,6 @@ export class WelcomeComponent implements OnInit {
 
     if (type === 'para') {
       if (this.indexPara < this.paraTemplate.length) {
-        console.log('Type Para...');
         this.para += this.paraTemplate.charAt(this.indexPara);
         this.indexPara++;
       }
