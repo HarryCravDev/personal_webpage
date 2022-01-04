@@ -1,0 +1,17 @@
+.tech-icon {
+  font-size: 3.5em;
+}
+
+.tech-text {
+  font-size: 0.9em;
+}
+
+/* .glass,
+.glass.btn-active, */
+.glass:hover {
+  background-color: #570df8;
+}
+
+.tech-card {
+  background-color: #570df8;
+}
