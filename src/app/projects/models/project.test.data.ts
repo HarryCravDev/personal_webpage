@@ -2,24 +2,22 @@ import { Project } from './project.model';
 
 export const projectsData: Project[] = [
   {
-    title: 'Colour game',
-    imageName: 'ColourGame',
-    description:
-      'This is the colour game build using web technology i find most interesting.',
+    title: 'Fitness App',
+    imageName: '../../../assets/fitness.card.jpg',
+    description: 'Fitness app description.',
     tags: ['Typescript', 'Angular', 'Tailwind CSS'],
   },
   {
     title: 'Github-finder-react',
-    imageName: 'GithubReact',
+    imageName: '../../../assets/github.project.card.jpg',
     description:
       "Search for GitHub users and receive a profile and the user's repositories.",
     tags: ['JavaScript', 'React', 'Tailwind CSS', 'Daisy UI'],
   },
   {
-    title: 'Express Typescript',
-    imageName: 'ExpressTypescript',
-    description:
-      'API base project which sets up a working base to build a REST API.',
+    title: 'JAJA business page',
+    imageName: '../../../assets/JAJA.card.jpg',
+    description: 'JAJA app description.',
     tags: ['Typescript', 'Node.js', 'Express'],
   },
 ];

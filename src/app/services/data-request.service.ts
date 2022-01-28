@@ -16,7 +16,7 @@ export class DataRequestService {
   constructor(private http: HttpClient) {}
 
   async getExerienceData(): Promise<Observable<any>> {
-    const res = await this.http.get('http://localhost:3005/experience');
+    const res = await this.http.get('http://localhost:3005/api/v1/experience');
 
     console.log('Service: ', res);
 

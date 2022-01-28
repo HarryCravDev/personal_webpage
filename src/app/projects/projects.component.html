@@ -1,17 +1,19 @@
 <div class="md:p-10 p-0">
   <!-- <h1 class="text-center mb-5 text-4xl font-bold">Projects</h1> -->
-  <h1 class="text-center mb-5 text-4xl">Projects</h1>
+  <h1 class="text-center text-4xl">Projects</h1>
+  <p class="text-center mb-5">
+    A few of my projects
+    <a
+      href="https://github.com/HarryCravDev"
+      target="_blank"
+      class="text-primary"
+      >For more <i class="fab fa-github"></i
+    ></a>
+  </p>
 
   <!-- Row 1 -->
   <div
-    class="
-      grid
-      lg:grid-cols-3
-      md:grid-cols-2
-      sm:grid-cols-1
-      gap-4
-      justify-items-center
-    "
+    class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center"
   >
     <app-project-card
       *ngFor="let project of projects"
