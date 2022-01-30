@@ -1,4 +1,4 @@
-<div class="md:p-20 p-0 mx-5">
+<div class="md:p-10 p-0 mx-5 md:mx-0" id="experience">
   <h1 class="text-xl text-center">Experience</h1>
   <p class="text-center mb-5">
     Here is some of my professional and educational experience.
@@ -19,6 +19,7 @@
     <app-experience-card
       *ngFor="let exp of experience"
       [experience]="exp"
+      class="w-full"
     ></app-experience-card>
   </div>
 </div>
