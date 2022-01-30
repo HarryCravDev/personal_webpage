@@ -1,10 +1,10 @@
 <div class="card card-bordered h-full">
   <figure class="project-container">
     <img [src]="project?.imageName" class="w-full" />
-
-    <!-- src="https://source.unsplash.com/random/700x500/?technology" -->
-    <!-- <img src="../../../assets/github.project.card.jpg" class="w-full" /> -->
-    <div class="overlay glass">
+    <!-- Project link ( mobile screens ) -->
+    <a *ngIf="mobile" class="projectLink" href="https://www.google.com" target="_blank"></a>
+    <!-- Hover code ( large screens) -->
+    <div *ngIf="!mobile" class="overlay glass">
       <div class="card-body p-2 text w-full">
         <h2 class="card-title text-center">{{ project?.title }}</h2>
         <p class="">{{ project?.description }}</p>

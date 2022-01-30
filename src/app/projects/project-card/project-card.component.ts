@@ -8,8 +8,12 @@ import { Project } from '../models/project.model';
 })
 export class ProjectCardComponent implements OnInit {
   @Input() project: Project | undefined;
-
+  mobile: boolean = false;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (window.screen.width <= 480) { // 768px portrait
+      this.mobile = true;
+    }
+  }
 }

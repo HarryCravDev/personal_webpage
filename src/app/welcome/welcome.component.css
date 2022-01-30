@@ -1,3 +1,15 @@
 /* .animate__animated .animate__backInUp {
   --animate-delay: 1s;
 } */
+
+.background-image {
+  background-image: url('https://images.pexels.com/photos/1146134/pexels-photo-1146134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-attachment: fixed;
+}
+@media (max-width: 640px) { 
+  
+  .background-image {
+    background-image: none;
+    background-attachment: fixed;
+  }
+}
