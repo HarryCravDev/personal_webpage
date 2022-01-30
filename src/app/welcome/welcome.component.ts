@@ -34,7 +34,7 @@ export class WelcomeComponent implements OnInit {
         clearInterval(paraInterval);
       }
       this.typeWriter('para');
-    }, 100);
+    }, 80);
   }
 
   typeWriter(type: string) {
