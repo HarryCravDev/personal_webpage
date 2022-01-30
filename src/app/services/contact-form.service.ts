@@ -19,7 +19,7 @@ export class ContactFormService {
     console.log('Message: ', { message });
 
     const res = await this.http.post<any>(
-      'https://agile-peak-42850.herokuapp.com/message',
+      'https://personal-webpage-backend-42850.herokuapp.com/message',
       message,
       httpOptions
     );

@@ -16,7 +16,7 @@ export class DataRequestService {
   constructor(private http: HttpClient) {}
 
   async getExerienceData(): Promise<Observable<any>> {
-    const res = await this.http.get('https://agile-peak-42850.herokuapp.com/api/v1/experience');
+    const res = await this.http.get('https://personal-webpage-backend-42850.herokuapp.com/api/v1/experience');
 
     console.log('Service: ', res);
 
@@ -25,7 +25,7 @@ export class DataRequestService {
 
   async postMessage(message: ContactMessage): Promise<Observable<any>> {
     const res = await this.http.post<any>(
-      'https://agile-peak-42850.herokuapp.com/message',
+      'https://personal-webpage-backend-42850.herokuapp.com/message',
       message,
       httpOptions
     );
@@ -35,7 +35,7 @@ export class DataRequestService {
 
   async postSubscribe(email: string) {
     const res = await this.http.post<any>(
-      'https://agile-peak-42850.herokuapp.com/subscribe',
+      'https://personal-webpage-backend-42850.herokuapp.com/subscribe',
       { email },
       httpOptions
     );
