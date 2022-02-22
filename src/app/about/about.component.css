@@ -35,3 +35,9 @@
   /* fill: #ffffff; */
   fill: #793ef9;
 }
+
+@media (max-width: 640px) {
+  #about {
+    margin: 2rem 0 3rem 0;
+  }
+}
