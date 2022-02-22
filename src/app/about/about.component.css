@@ -15,3 +15,23 @@
 .tech-card {
   background-color: #570df8;
 }
+.curve-about {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.curve-about svg {
+  position: relative;
+  display: block;
+  width: calc(161% + 1.3px);
+  height: 74px;
+}
+
+.curve-about .shape-fill {
+  /* fill: #ffffff; */
+  fill: #793ef9;
+}
