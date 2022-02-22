@@ -1,21 +1,10 @@
 <!-- <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content sticky top-0"> -->
 <div
-  class="
-    navbar
-    mb-2
-    shadow-lg
-    bg-neutral
-    text-neutral-content
-    fixed
-    top-0
-    left-0
-    right-0
-    project-navbar
-  "
+  class="navbar mb-2 shadow-lg bg-neutral text-neutral-content fixed top-0 left-0 right-0 project-navbar"
 >
   <!-- Burger icon -->
   <div class="flex-none md:hidden">
-    <button class="btn btn-square btn-ghost">
+    <button class="btn btn-square btn-ghost" (click)="onExpandMenu()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -32,14 +21,24 @@
     </button>
   </div>
 
+  <div class="navbar-center sm:block md:hidden">
+    <a class="btn btn-ghost normal-case text-xl">Harry Craven</a>
+  </div>
+
   <!-- Nav Items -->
   <div class="flex-1 px-2 mx-2 justify-center">
     <div class="items-stretch hidden md:flex">
       <a href="#home" class="btn btn-ghost btn-sm rounded-btn"> Home </a>
       <a href="#about" class="btn btn-ghost btn-sm rounded-btn"> About </a>
-      <a href="#projects" class="btn btn-ghost btn-sm rounded-btn"> Portfolio </a>
-      <a href="#experience" class="btn btn-ghost btn-sm rounded-btn"> Experience </a>
-      <a href="#contact-form" class="btn btn-ghost btn-sm rounded-btn"> Contact </a>
+      <a href="#projects" class="btn btn-ghost btn-sm rounded-btn">
+        Portfolio
+      </a>
+      <a href="#experience" class="btn btn-ghost btn-sm rounded-btn">
+        Experience
+      </a>
+      <a href="#contact-form" class="btn btn-ghost btn-sm rounded-btn">
+        Contact
+      </a>
     </div>
   </div>
 </div>

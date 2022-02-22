@@ -1,24 +1,66 @@
-<!-- Navbar -->
-<app-navbar></app-navbar>
-<section class="h-full">
-  <!-- Welcome screen -->
-  <app-welcome></app-welcome>
+<div class="h-screen drawer w-full rounded">
+  <input
+    id="my-drawer-4"
+    type="checkbox"
+    class="drawer-toggle"
+    #inputCheckbox
+  />
+  <div class="drawer-content">
+    <!-- Page content here -->
 
-  <!-- About Section -->
-  <app-about></app-about>
+    <!-- Navbar -->
+    <app-navbar (expandMenu)="expandDrawer(inputCheckbox, true)"></app-navbar>
+    <section class="h-full">
+      <!-- Welcome screen -->
+      <app-welcome></app-welcome>
 
-  <!-- Projects -->
-  <app-projects></app-projects>
+      <!-- About Section -->
+      <app-about></app-about>
 
-  <!-- Experience -->
-  <app-experience></app-experience>
+      <!-- Projects -->
+      <app-projects></app-projects>
 
-  <!-- Contact Form -->
-  <app-contact-form></app-contact-form>
+      <!-- Experience -->
+      <app-experience></app-experience>
 
-  <!-- Subscribe widget -->
-  <!-- <app-subscribe-widget></app-subscribe-widget> -->
+      <!-- Contact Form -->
+      <app-contact-form></app-contact-form>
 
-  <!-- Contact links etc... -->
-  <app-footer></app-footer>
-</section>
+      <!-- Subscribe widget -->
+      <!-- <app-subscribe-widget></app-subscribe-widget> -->
+
+      <!-- Contact links etc... -->
+      <app-footer></app-footer>
+    </section>
+  </div>
+
+  <div class="drawer-side">
+    <label for="my-drawer-4" class="drawer-overlay"></label>
+    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+      <!-- Sidebar content here -->
+      <li>
+        <a href="#about" (click)="expandDrawer(inputCheckbox, false)"
+          >About <span class="material-icons"> face </span>
+        </a>
+      </li>
+      <li>
+        <a href="#projects" (click)="expandDrawer(inputCheckbox, false)"
+          >Portfolio
+          <span class="material-icons"> palette </span>
+        </a>
+      </li>
+      <li>
+        <a href="#experience" (click)="expandDrawer(inputCheckbox, false)"
+          >Experience
+          <span class="material-icons"> badge </span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact-form" (click)="expandDrawer(inputCheckbox, false)"
+          >Contact
+          <span class="material-icons"> phone_iphone </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
