@@ -18,8 +18,6 @@ export class DataRequestService {
   async getExerienceData(): Promise<Observable<any>> {
     const res = await this.http.get('https://personal-webpage-backend-42850.herokuapp.com/api/v1/experience');
 
-    console.log('Service: ', res);
-
     return res;
   }
 
@@ -39,9 +37,5 @@ export class DataRequestService {
       { email },
       httpOptions
     );
-
-    res.subscribe((e) => console.log('postSubscribe :::: ', e));
-
-    console.log('Service email: ', res);
   }
 }
