@@ -4,9 +4,9 @@
     <!-- Project link ( mobile screens ) -->
     <a *ngIf="mobile" class="projectLink" href="https://www.google.com" target="_blank"></a>
     <!-- Hover code ( large screens) -->
-    <div *ngIf="!mobile" class="overlay glass">
+    <div *ngIf="!mobile" class="overlay bg-primary">
       <div class="card-body p-2 text w-full">
-        <h2 class="card-title text-center">{{ project?.title }}</h2>
+        <h2 class="card-title project-title">{{ project?.title }}</h2>
         <p class="">{{ project?.description }}</p>
 
         <div class="card-actions self-center project-technologies-container">
