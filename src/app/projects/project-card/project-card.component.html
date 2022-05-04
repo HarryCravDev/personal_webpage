@@ -1,33 +1,23 @@
-<div class="card card-bordered h-full">
-  <figure class="project-container">
-    <img [src]="project?.imageName" class="w-full" />
-    <!-- Project link ( mobile screens ) -->
-    <a *ngIf="mobile" class="projectLink" href="https://www.google.com" target="_blank"></a>
-    <!-- Hover code ( large screens) -->
-    <div *ngIf="!mobile" class="overlay bg-primary">
-      <div class="card-body p-2 text w-full">
-        <h2 class="card-title project-title">{{ project?.title }}</h2>
-        <p class="">{{ project?.description }}</p>
-
-        <div class="card-actions self-center project-technologies-container">
-          <div *ngFor="let tag of project?.tags" class="badge badge-ghost">
-            {{ tag }}
+<!-- <div class="card card-bordered h-full"> -->
+<div [ngClass]="index > 2 ? 'hidden card card-bordered h-full sm:block' : 'card card-bordered h-full'">
+  <a [href]="project?.projectUrl" target="_blank">
+    
+    <figure class="project-container">
+      <img [src]="project?.imageName" class="w-full" />
+      <!-- Project link ( mobile screens ) -->
+      <!-- Hover code ( large screens) -->
+      <div *ngIf="!mobile" class="overlay bg-primary">
+        <div class="card-body p-2 text w-full">
+          <h2 class="card-title project-title">{{ project?.title }}</h2>
+          <p class="">{{ project?.description }}</p>
+  
+          <div class="card-actions self-center project-technologies-container">
+            <div *ngFor="let tag of project?.tags" class="badge badge-ghost">
+              {{ tag }}
+            </div>
           </div>
         </div>
       </div>
-      <!-- <p class="text">{{ project?.description }}</p> -->
-    </div>
-  </figure>
-
-  <!-- <div class="card-body p-5">
-
-    <h2 class="card-title text-center">{{ project?.title }}</h2>
-
-    <div class="card-actions">
-
-      <div *ngFor="let tag of project?.tags" class="badge badge-ghost">
-        {{ tag }}
-      </div>
-    </div>
-  </div> -->
+    </figure>
+  </a>
 </div>

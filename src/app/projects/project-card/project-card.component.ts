@@ -8,6 +8,7 @@ import { Project } from '../models/project.model';
 })
 export class ProjectCardComponent implements OnInit {
   @Input() project: Project | undefined;
+  @Input() index: number = 0;
   mobile: boolean = false;
   constructor() {}
 

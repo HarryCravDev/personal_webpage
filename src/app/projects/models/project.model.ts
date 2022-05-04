@@ -3,4 +3,5 @@ export interface Project {
   tags: string[];
   imageName: string;
   description: string;
+  projectUrl: string;
 }
