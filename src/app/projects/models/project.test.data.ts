@@ -25,21 +25,21 @@ export const projectsData: Project[] = [
   },
   {
     title: 'Type It',
-    imageName: '../../../assets/JAJA.card.jpg',
+    imageName: 'https://github.com/HarryCravDev/personal_webpage/blob/main/src/assets/type.it.Project.card.jpg?raw=true',
     description: 'Type It game app description.',
     tags: ['Typescript', 'React', 'Tailwind CSS'],
     projectUrl: "https://github.com/HarryCravDev/type-it-react-ts"
   },
   {
     title: 'Car Value API',
-    imageName: '../../../assets/JAJA.card.jpg',
+    imageName: 'https://github.com/HarryCravDev/personal_webpage/blob/main/src/assets/nest.Project.card.jpg?raw=true',
     description: 'Car value game app description.',
     tags: ['Node.js', 'NestJS', 'TypeScript', "TypeORM", "SQLite"],
     projectUrl: "https://github.com/HarryCravDev/car-value-api"
   },
   {
     title: 'Dev Camper API',
-    imageName: '../../../assets/JAJA.card.jpg',
+    imageName: 'https://github.com/HarryCravDev/personal_webpage/blob/main/src/assets/api-Project.card.jpg?raw=true',
     description: 'Dev Camper game app description.',
     tags: ['Node.js', 'Express', 'Mongoose', "MongoDB"],
     projectUrl: "https://github.com/HarryCravDev/DevCamper_Backend"
