@@ -14,6 +14,7 @@ export class ContactFormComponent implements OnInit {
   subjectText: string = '';
   textAreaText: string = '';
   errorMessage: string = '';
+  loading: boolean = false;
   formRequestInterval: any;
 
   constructor(private contactFormService: ContactFormService) {}
@@ -21,6 +22,7 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void {}
 
   async onSubmit(form: NgForm) {
+    this.loading = true;
     const res = await this.contactFormService.postMessage(form.value);
 
     res.subscribe(
@@ -32,7 +34,7 @@ export class ContactFormComponent implements OnInit {
 
         // Show text alert informing message was corrently send
         this.messageSuccess = true;
-
+        this.loading = false;
         this.clearInputFields();
       },
       (err) => {
@@ -45,6 +47,7 @@ export class ContactFormComponent implements OnInit {
         // Show text alert informing message was corrently send
         this.errorMessage = err.message;
         this.messageFailure = true;
+        this.loading = false;
       }
     );
   }

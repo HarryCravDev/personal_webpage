@@ -27,6 +27,7 @@
           [(ngModel)]="emailText"
           email
           required
+          [disabled]="loading"
           #email="ngModel"
         />
 
@@ -43,6 +44,7 @@
           [(ngModel)]="subjectText"
           required
           #subject="ngModel"
+          [disabled]="loading"
         />
 
         <!-- Email -->
@@ -56,6 +58,7 @@
           name="message"
           [(ngModel)]="textAreaText"
           #message="ngModel"
+          [disabled]="loading"
           required
         ></textarea>
 
@@ -67,7 +70,7 @@
 
           <button
             class="btn btn-primary contact-form-button"
-            [disabled]="!f.valid"
+            [disabled]="!f.valid || loading"
           >
             Submit!
           </button>
