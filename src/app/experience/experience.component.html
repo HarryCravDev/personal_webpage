@@ -2,22 +2,20 @@
   <h2 class="text-4xl font-bold text-center">Experience</h2>
   <p class="text-center mb-5">
     Here is some of my professional and educational experience.
-    <a href="https://harry-craven-pdf-upload.s3.eu-west-2.amazonaws.com/cv.pdf" target="_blank" class="text-primary">CV Link.</a>
+    <a
+      href="https://harry-craven-pdf-upload.s3.eu-west-2.amazonaws.com/Harry_Craven_CV.pdf"
+      target="_blank"
+      class="text-primary"
+      >CV Link.</a
+    >
   </p>
 
   <!-- Row 1 -->
   <div
-    class="
-      grid
-      lg:grid-cols-3
-      md:grid-cols-2
-      sm:grid-cols-1
-      gap-4
-      justify-items-center
-    "
+    class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center"
   >
     <app-experience-card
-      *ngFor="let exp of experience;"
+      *ngFor="let exp of experience"
       [experience]="exp"
       class="w-full"
     ></app-experience-card>
