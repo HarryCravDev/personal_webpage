@@ -19,7 +19,7 @@ export class ContactFormService {
     console.log('Message: ', { message });
 
     const res = await this.http.post<any>(
-      'https://personal-webpage-backend-42850.herokuapp.com/message',
+      'https://personal-website-api-production.up.railway.app/message',
       message,
       httpOptions
     );
