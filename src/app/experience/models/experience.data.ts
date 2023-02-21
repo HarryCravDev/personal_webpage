@@ -5,7 +5,7 @@ export const experience: Experience[] = [
     company: 'IMS Evolve',
     jobTitle: 'Full Stack Developer',
     description:
-      'Developing new web applications and maintaining features all across the stack for a number of high profile clients. Made use of the latest web technology from Angular for UIs and TypeScript APIs for backend development.',
+      'I design and develop front- and back-end applications, end to end, for several high-profile clients. I make use of the latest web technologies, such as Angular and React for UIs and Node for back-end APIs, writing fully in TypeScript.',
     fromDate: '01/12/2020',
     toDate: 'Present',
   },
@@ -13,7 +13,7 @@ export const experience: Experience[] = [
     company: 'Total System Services',
     jobTitle: 'Test Analysis',
     description:
-      'Testing web applications using manual and automated testing techniques end-to-end, documenting defects in an understandable and organised way.',
+      'I tested web applications using manual and automated testing techniques which I documented and fed back to developers.',
     fromDate: '01/05/2019',
     toDate: '01/12/2020',
   },
