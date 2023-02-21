@@ -20,3 +20,13 @@
 .profile-image {
   max-width: 450px;
 }
+
+.contact-form-container {
+  background-color: #793df9;
+  background-image: linear-gradient(
+    43deg,
+    #793df9 0%,
+    #c850c0 83%,
+    #ffcc70 100%
+  );
+}
