@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "heroku-postbuild": "ng build --configuration=production --base-href='./'",
-    "start": "node server.js",
+    "start": "pm2 start server.js",
     "dev": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "prod": "ng build --configuration=production --base-href='./'",
@@ -28,6 +28,7 @@
     "express": "^4.17.2",
     "material-design-icons": "^3.0.1",
     "path": "^0.12.7",
+    "pm2": "^5.2.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "typescript": "~4.3.5",
