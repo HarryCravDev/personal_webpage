@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "heroku-postbuild": "ng build --configuration=production --base-href='./'",
-    "start": "pm2 start server.js",
+    "start": "node server.js",
     "dev": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "prod": "ng build --configuration=production --base-href='./'",
